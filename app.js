@@ -8,6 +8,13 @@ app.use(cors());
 
 const port = process.env.PORT || 3000;
 
+/**
+ * Here we call the routes! 😎
+*/
+
+//TODO: localhost/api/_________
+app.use('/api', require("./routes"))
+
 app.listen(port, () => {
   console.log(`The service is runnig on http://localhost:${port}`);
 });
